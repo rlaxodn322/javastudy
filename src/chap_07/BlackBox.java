@@ -7,6 +7,11 @@ public class BlackBox {
     String color;
     static boolean canAutoReport = false;
 
+    static void callServiceCenter(){
+        System.out.println("서비스 센터(1577-1999)로 연결합니다.");
+
+    }
+
     void autoReport(){
          if(canAutoReport){
              System.out.println("충돌 감지되어 신고합니다.");
