@@ -5,12 +5,8 @@ public class BlackBox {
     String resolution;
     int price;
     String color;
+
     static boolean canAutoReport = false;
-
-    static void callServiceCenter(){
-        System.out.println("서비스 센터(1577-1999)로 연결합니다.");
-
-    }
 
     void autoReport(){
          if(canAutoReport){
@@ -44,6 +40,12 @@ public class BlackBox {
 
     void record(){
         record(true, true, 20);
+    }
+    static void callServiceCenter(){
+        System.out.println("서비스 센터(1577-1999)로 연결합니다.");
+        canAutoReport = true;
+
+        String s = String.valueOf(123);
     }
 
 
