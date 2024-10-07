@@ -5,6 +5,6 @@ public class _06_ClassMethod {
         BlackBox b1 = new BlackBox();
         b1.callServiceCenter();
 
-            BlackBox  b2 = enew
+            BlackBox  b2 = new BlackBox();
     }
 }
