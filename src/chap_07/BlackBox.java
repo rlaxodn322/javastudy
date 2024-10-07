@@ -49,4 +49,7 @@ public class BlackBox {
     }
 
 
+     void appendModelName() {
+         this.modelName += "(최신형)";
+    }
 }
