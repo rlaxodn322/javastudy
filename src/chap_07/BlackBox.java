@@ -1,5 +1,7 @@
 package chap_07;
 
+
+
 public class BlackBox {
     String modelName;
     String resolution;
@@ -10,16 +12,16 @@ public class BlackBox {
     static boolean canAutoReport = false;
     
     BlackBox(){
-        this.serialNumber = ++counter;
-        System.out.println("생성자 호출" + serialNumber);
+//        this.serialNumber = ++counter;
+//        System.out.println("생성자 호출" + serialNumber);
     }
     BlackBox(String modelName, String resolution, int price, String color){
-        this();
-        System.out.println("사용자 정의 생성자 호출");
-        this.modelName = modelName;
-        this.resolution = resolution;
-        this.price = price;
-        this.color = color;
+//        this();
+//        System.out.println("사용자 정의 생성자 호출");
+//        this.modelName = modelName;
+//        this.resolution = resolution;
+//        this.price = price;
+//        this.color = color;
 
     }
     void autoReport(){
@@ -66,4 +68,41 @@ public class BlackBox {
      void appendModelName() {
          this.modelName += "(최신형)";
     }
+
+    String getModelName(){
+        return modelName;
+    }
+    void setModelName(String modelName){
+        this.modelName = modelName;
+    }
+    String getResolution(){
+        if(resolution == null || resolution.isEmpty()){
+            return "판매자에게 문의하세요.";
+        }
+        return resolution;
+
+    }
+    void setResolution(String resolution){
+        this.resolution = resolution;
+    }
+
+    String getColor(){
+        return color;
+    }
+    void setColor(String color){
+        this.color = color;
+    }
+
+    int getPrice(){
+        return price;
+    }
+    void setPrice(int price){
+        if(price<100000){
+            this.price = 100000;
+        }else{
+            this.price = price;
+        }
+    }
+
+
 }
