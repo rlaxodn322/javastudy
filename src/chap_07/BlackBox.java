@@ -5,9 +5,23 @@ public class BlackBox {
     String resolution;
     int price;
     String color;
-
+    int serialNumber;
+    static int counter = 0;
     static boolean canAutoReport = false;
+    
+    BlackBox(){
+        this.serialNumber = ++counter;
+        System.out.println("생성자 호출" + serialNumber);
+    }
+    BlackBox(String modelName, String resolution, int price, String color){
+        this();
+        System.out.println("사용자 정의 생성자 호출");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
 
+    }
     void autoReport(){
          if(canAutoReport){
              System.out.println("충돌 감지되어 신고합니다.");
