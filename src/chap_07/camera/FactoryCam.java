@@ -4,9 +4,12 @@ public class FactoryCam extends Camera {// 자식클래스
 
 
     public FactoryCam() {
-        this.name = "공장 카메라";
+        super("공장 카메라");
     }
-
+    public void recordVideo(){
+        super.recordVideo();
+        detectFire();
+    }
     public void detectFire(){
         System.out.println("화재를 감지합니다.");
     }
